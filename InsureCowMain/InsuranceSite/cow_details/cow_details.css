@@ -94,7 +94,7 @@ form {
     padding: 1rem;
 }
 
-.cow-details .pdf > div{
+.cow-details .pdf>div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -102,31 +102,55 @@ form {
 }
 
 /* Table */
-.table-style {
-    border-radius: 3px;
-    box-shadow: rgba(35, 187, 10, 0.40) 0px 3px 8px;
-    margin: 0;
+/* DataTable */
+table.dataTable {
+    box-shadow: rgba(79, 172, 35, 0.67) 0px 4px 8px;
+    border-radius: 4px;
+    border: none !important;
 }
 
-.table th {
+.dataTables_wrapper>div {
+    margin: 25px;
+}
+
+th,
+td {
+    padding-left: 20px !important;
+    border: none !important;
+}
+
+.thead-style {
     background-color: #23BB86;
     color: #fff;
-    font-weight: 400;
-    font-size: 22px;
 }
 
-.table td {
-    font-weight: 300;
-    font-size: 21px;
+table tbody tr:nth-child(2n+1) {
+    background-color: #f8f7f5 !important;
 }
 
-.table th,
-.table td {
-    padding-left: 52px;
+/* Pagination */
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    background: none !important;
+    background-color: #C7F8C9 !important;
+    border: none;
+    color: #082E13 !important;
 }
 
-.table tbody tr:nth-child(odd) {
-    background-color: #f8f7f5;
+.paginate_button.current:hover {
+    background: none !important;
+    background-color: #C7F8C9 !important;
+    background-color: none !important;
+    border: none;
+    color: #082E13 !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    color: #082E13 !important;
+    background: none !important;
+    border: none;
+    background-color: #C7F8C9 !important;
 }
 
 /* Table */
@@ -158,14 +182,16 @@ form {
         width: 120px;
         padding: 6px 0px;
     }
+
     /* Navbar */
 
     /* Middle-content */
-    .cow-details .pdf > div{
+    .cow-details .pdf>div {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
+
     /* Middle-content */
 }

@@ -10,13 +10,17 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <!-- Css -->
-    <link rel="stylesheet" href="./register_account.css" />
+    <link rel="stylesheet" href="./fieldagent_list.css" />
 
-    <title>InsureCow</title>
+    <!-- Table Css -->
+    <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/rowreorder/1.2.8/css/rowReorder.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css" rel="stylesheet">
+
+    <title>Insurance Company List</title>
 </head>
 
-<body class="container p-3">
-
+<body class="container">
     <!-- Navbar -->
     <header>
         <div>
@@ -43,12 +47,12 @@
 
                             <!--Profile-->
                             <li class="nav-item navbar-brand">
-                                <a href="#" class="nav-link">Ins Companys</a>
+                                <a href="#" class="nav-link">Profile</a>
                             </li>
 
                             <!--Notification-->
                             <li class="nav-item navbar-brand">
-                                <a href="#" class="nav-link active">Registration</a>
+                                <a href="#" class="nav-link">Notification</a>
                             </li>
 
                             <!--Sign out-->
@@ -77,63 +81,85 @@
     </header>
     <!-- Navbar -->
 
-    <!-- Middle Content -->
-    <section class="row style-section">
+    <section class="mt-4 mb-5">
+        <div>
+            <table id="insurecow-datatable" class="display" style="width:100%">
+                <thead class="thead-style">
+                    <tr>
+                        <th>Agent Name</th>
+                        <th>Thana </th>
+                        <th>Post</th>
+                        <th>Reg. cattle Numbers</th>
 
-        <!-- form -->
-        <div class="col-sm-8 offset-sm-2 col-lg-8  col-xl-6 offset-xl-3 text-start mt-sm-5 mt-md-5 mt-lg-5 mt-xl-6">
+                    </tr>
+                </thead>
+                <tbody>
 
+                    <tr>
+                        <th>Rahim Uddin </th>
+                        <th>Saver</th>
+                        <th>Saver</th>
+                        <th>12</th>
+                    </tr>
+                    <tr>
+                        <th>Rasal Khan </th>
+                        <th>Mirpur </th>
+                        <th>Mirpur </th>
+                        <th>08</th>
+                    </tr>
+                    <tr>
+                        <th>Karim Ali </th>
+                        <th>Khulna </th>
+                        <th>Khulna </th>
+                        <th>25</th>
+                    </tr>
+                    <tr>
+                        <th>Satu Rahman </th>
+                        <th>Kushtia </th>
+                        <th>Kushtia </th>
+                        <th>20</th>
+                    </tr>
+                    <tr>
+                        <th>Asif Rahman</th>
+                        <th>Bagur </th>
+                        <th>Bagur </th>
+                        <th>15</th>
+                    </tr>
+                    <tr>
+                        <th>Salam Khan </th>
+                        <th>Rangpur </th>
+                        <th>Rangpur </th>
+                        <th>05</th>
+                    </tr>
+                    <tr>
+                        <th>Raju Uddin </th>
+                        <th>Uttara </th>
+                        <th>Uttara </th>
+                        <th>27</th>
+                    </tr>
+                    <tr>
+                        <th>Imran Khan </th>
+                        <th>Manikganj </th>
+                        <th>Manikganj </th>
+                        <th>27</th>
+                    </tr>
+                    <tr>
+                        <th>Nur Ahmed </th>
+                        <th>Cumilla </th>
+                        <th>Cumilla </th>
+                        <th>15</th>
+                    </tr>
+                    <tr>
+                        <th>Sayed Khan </th>
+                        <th>Chandpur </th>
+                        <th>Chandpur </th>
+                        <th>10</th>
+                    </tr>
 
-            <form class="p-4">
-                <h3 class="text-dark fw-bolder fs-4 mb-4">Register Account</h3>
-
-                <div class="mb-3 d-flex flex-column">
-                    <label for="exampleInputName" class="form-label">Insurance Company Name :</label>
-                    <div class="d-flex flex-row input-style form-control">
-                        <img class="img-fluid" src="./images/location.png" alt="">
-                        <input type="text" placeholder="Express Insurance Ltd." class="" id="exampleInputName"
-                            aria-describedby="textHelp">
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Email:</label>
-                    <div class="d-flex flex-row input-style form-control">
-                        <img class="img-fluid" src="./images/message.png" alt="">
-                        <input type="email" placeholder="forhad1996rion@gmail.com" class="" id="exampleInputEmail1"
-                            aria-describedby="emailHelp">
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Create Password:</label>
-                    <div class="d-flex flex-row input-style form-control">
-                        <img class="img-fluid" src="./images/password.png" alt="">
-                        <input type="password" placeholder="******" class="" id="exampleInputPassword1">
-                    </div>
-                </div>
-
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Confirm Password:</label>
-                    <div class="d-flex flex-row input-style form-control">
-                        <img class="img-fluid" src="./images/password.png" alt="">
-                        <input type="password" placeholder="******" class="" id="exampleInputPassword1">
-                    </div>
-                </div>
-
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    <label class="form-check-label" for="flexCheckDefault">
-                        I agree to platform Terms of Service and Privacy Policy
-                    </label>
-                </div>
-                <button type="submit" class="btn register-btn w-50 my-2">Register</button>
-            </form>
+                </tbody>
+            </table>
         </div>
-        <!-- form -->
-
     </section>
-    <!-- Middle Content -->
 
     <!-- Footer -->
     <hr class="hr-style">
@@ -202,10 +228,29 @@
     </section>
     <!-- Footer -->
 
+
     <!-- Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
         </script>
+
+
+    <!-- Table JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/rowreorder/1.2.8/js/dataTables.rowReorder.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#insurecow-datatable').DataTable();
+        });
+
+        $('#insurecow-datatable').DataTable({
+            responsive: true
+        });
+    </script>
+
 </body>
 
 </html>

@@ -11,10 +11,16 @@
 
     <!-- Css -->
     <link rel="stylesheet" href="./cow_list.css" />
-    <title>Field Agent List</title>
+
+    <!-- Table Css -->
+    <link href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/rowreorder/1.2.8/css/rowReorder.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css" rel="stylesheet">
+
+    <title>Cow List</title>
 </head>
 
-<body>
+<body class="container">
     <!-- Navbar -->
     <header>
         <div>
@@ -75,30 +81,119 @@
     </header>
     <!-- Navbar -->
 
-    <section>
+    <section class="mt-4 mb-5">
 
         <!-- Table -->
-        <div class="table-responsive col-lg-12 table-style">
-
-            <table class="table table-hover" id="cow-list-table">
-                <thead>
+        <div>
+            <table id="insurecow-datatable" class="display" style="width:100%">
+                <thead class="thead-style">
                     <tr>
-                        <th scope="col">Cattle ID</th>
-                        <th scope="col">Owner Name</th>
-                        <th scope="col">Thana</th>
-                        <th scope="col">Bread</th>
-                        <th scope="col">Age</th>
-                        <th scope="col">Weight</th>
-                        <th scope="col">Gender</th>
+                        <th>Cattle ID </th>
+                        <th>Owner Name </th>
+                        <th>Thana </th>
+                        <th>Bread </th>
+                        <th>Age </th>
+                        <th>Weight </th>
+                        <th>Gender </th>
+
                     </tr>
                 </thead>
                 <tbody>
-                    
+
+                    <tr>
+                        <th>1010 </th>
+                        <th><a href="../cow_details/cow_details.html"> Rahim Uddin </a></th>
+                        <th>Saver </th>
+                        <th>Desi </th>
+                        <th>2 Year </th>
+                        <th>350 Kg </th>
+                        <th>Male </th>
+                    </tr>
+                    <tr>
+                        <th>1011</th>
+                        <th><a href="../cow_details/cow_details.html">Rasal Khan </a></th>
+                        <th>Mirpur </th>
+                        <th>Desi </th>
+                        <th>3 Year </th>
+                        <th>450 Kg </th>
+                        <th>Male </th>
+                    </tr>
+                    <tr>
+                        <th>1012</th>
+                        <th><a href="../cow_details/cow_details.html"> Karim Ali </a></th>
+                        <th>Khulna </th>
+                        <th>Brahman </th>
+                        <th>1 Year </th>
+                        <th>160 Kg </th>
+                        <th>Male </th>
+                    </tr>
+                    <tr>
+                        <th>1013</th>
+                        <th>Satu Rahman </th>
+                        <th>Kushtia </th>
+                        <th>Friesian </th>
+                        <th>1.5 Year </th>
+                        <th>220 Kg </th>
+                        <th>Female </th>
+                    </tr>
+                    <tr>
+                        <th>1014</th>
+                        <th>Asif Rahman </th>
+                        <th>Bagura</th>
+                        <th>Braford </th>
+                        <th>2 Year </th>
+                        <th>320 Kg </th>
+                        <th>Male </th>
+                    </tr>
+                    <tr>
+                        <th>1015</th>
+                        <th>Salam Khan </th>
+                        <th>Rangpur </th>
+                        <th>Braford </th>
+                        <th>2.5 Year </th>
+                        <th>360 Kg </th>
+                        <th>Male </th>
+                    </tr>
+                    <tr>
+                        <th>1016</th>
+                        <th>Raju Uddin </th>
+                        <th>Uttara </th>
+                        <th>Brahman </th>
+                        <th>3 Year </th>
+                        <th>450 Kg </th>
+                        <th>Male </th>
+                    </tr>
+                    <tr>
+                        <th>1017</th>
+                        <th>Imran Khan </th>
+                        <th>Manikganj </th>
+                        <th>Brahman </th>
+                        <th>2.5 Year </th>
+                        <th>300 Kg </th>
+                        <th>Male </th>
+                    </tr>
+                    <tr>
+                        <th>1018</th>
+                        <th>Nur Ahmed </th>
+                        <th>Cumilla </th>
+                        <th>Friesian </th>
+                        <th>1.5 Year </th>
+                        <th>160 Kg </th>
+                        <th>Female </th>
+                    </tr>
+                    <tr>
+                        <th>1019</th>
+                        <th>Sayed Khan </th>
+                        <th>Chandpur </th>
+                        <th>Friesian </th>
+                        <th>2 Year </th>
+                        <th>280 Kg </th>
+                        <th>Female </th>
+                    </tr>
+
                 </tbody>
             </table>
         </div>
-        <!-- Table -->
-
     </section>
 
     <!-- Footer -->
@@ -172,9 +267,25 @@
     <!-- Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+
+
+    <!-- Table JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/rowreorder/1.2.8/js/dataTables.rowReorder.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#insurecow-datatable').DataTable();
+        });
+
+        $('#insurecow-datatable').DataTable({
+            responsive: true
+        });
     </script>
 
-    <script src="./cow_list.js"></script>
 </body>
 
 </html>
